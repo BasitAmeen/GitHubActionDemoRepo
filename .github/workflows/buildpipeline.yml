@@ -41,7 +41,7 @@ jobs:
   UAT:
     name: Deploy to UAT 
     runs-on: ubuntu-latest
-    needs: build
+    needs: SIT
     environment: 
        name: uat
     steps:
@@ -51,7 +51,7 @@ jobs:
   Stag:
     name: Deploy to Stagging
     runs-on: ubuntu-latest
-    needs: Dev
+    needs: UAT
     environment: 
       name: stagging
     steps:
