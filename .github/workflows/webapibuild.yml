@@ -20,7 +20,7 @@ jobs:
         run: dotnet build ./GitHubPocWebApi/GitHubPocWebApi.sln 
   
       - name: dotnet publish
-        run: dotnet publish **.csproj -c release -o ${{env.DOTNET_ROOT}}/githubpocapi
+        run: dotnet publish ./GitHubPocWebApi/GitHubPocWebApi/GitHubPocWebApi.csproj -c release -o ${{env.DOTNET_ROOT}}/githubpocapi
   
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3.1.2
