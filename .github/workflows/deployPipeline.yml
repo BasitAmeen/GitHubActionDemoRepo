@@ -1,9 +1,10 @@
 name: deploy
-
 on:
-  push:
-    tags:
-      _"*"
+  workflow_run:
+    workflows: ["BuildPipeline"]
+    branches:  [main]
+    types: -completed
+    
 jobs:
   DeployDev:
     name: Deploy to Dev 
