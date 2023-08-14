@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: action/checkout@v3
+      - uses: action/checkout@v3.5.3
+        with: 
+          repository: ${{ github.repository }}
+      
       - name: Setup .net
         uses: action/setup-dotnet@v3
         with:
