@@ -19,7 +19,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   
-  deploy:
+  Dev:
     name: Deploy to Dev 
     runs-on: ubuntu-latest
     needs: build
@@ -29,7 +29,7 @@ jobs:
       - name: Deploy
         run: echo I am deploying! 
   
-  DeployStagging:
+  Stag:
     name: Deploy to Stagging
     runs-on: ubuntu-latest
     needs: build
@@ -39,7 +39,7 @@ jobs:
       - name: Deploy
         run: echo I am deploying in stagging!  
   
-  DeployProduction:
+  Production:
     name: Deploy to Production
     runs-on: ubuntu-latest
     needs: build
