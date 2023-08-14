@@ -41,7 +41,7 @@ jobs:
   UAT:
     name: Deploy to UAT 
     runs-on: ubuntu-latest
-    needs: SIT
+    needs: [SIT,Dev]
     environment: 
        name: uat
     steps:
