@@ -1,1 +1,33 @@
+name: deploy
 
+on:
+  push:
+    tags:
+      _"*"
+jobs:
+  DeployDev:
+    name: Deploy to Dev 
+    runs-on: ubuntu-latest
+    environment: 
+      name: dev
+    steps:
+      - name: Deploy
+        run: echo I am deploying! 
+
+  DeployStagging:
+    name: Deploy to Stagging
+    runs-on: ubuntu-latest
+    environment: 
+      name: stagging
+    steps:
+      - name: Deploy
+        run: echo I am deploying in stagging!  
+
+  DeployProduction:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    environment: 
+      name: prod
+    steps:
+      - name: Deploy
+        run: echo I am deploying in Product!
