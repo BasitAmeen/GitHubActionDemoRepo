@@ -17,7 +17,7 @@ jobs:
             dotnet-version: 6.0.x
          
       - name: build
-        run: dotnet build **.sln --no-restore
+        run: dotnet build ./GitHubPocWebApi/GitHubPocWebApi.sln 
   
       - name: dotnet publish
         run: dotnet publish **.csproj -c release -o ${{env.DOTNET_ROOT}}/githubpocapi
