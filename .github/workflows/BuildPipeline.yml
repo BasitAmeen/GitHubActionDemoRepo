@@ -20,15 +20,14 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-
-   DeployDev:
+  DeployDev:
     name: Deploy to Dev 
     runs-on: ubuntu-latest
     environment: 
       name: dev
     steps:
       - name: Deploy
-        run: echo I am deploying! 
+      run: echo I am deploying! 
 
   DeployStagging:
     name: Deploy to Stagging
