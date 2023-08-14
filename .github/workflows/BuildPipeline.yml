@@ -18,9 +18,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  DeployDev:
+  
+  deploy:
     name: Deploy to Dev 
     runs-on: ubuntu-latest
+    needs: build
     environment: 
        name: dev
     steps:
@@ -30,6 +32,7 @@ jobs:
   DeployStagging:
     name: Deploy to Stagging
     runs-on: ubuntu-latest
+    needs: build
     environment: 
       name: stagging
     steps:
@@ -39,6 +42,7 @@ jobs:
   DeployProduction:
     name: Deploy to Production
     runs-on: ubuntu-latest
+    needs: build
     environment: 
       name: prod
     steps:
