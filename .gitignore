@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GitHubPocWebApi/GitHubPocWebApi/bin/Debug/net6.0
+/GitHubPocWebApi/GitHubPocWebApi/obj
+/GitHubPocWebApi/.vs/GitHubPocWebApi
+/GitHubPocWebApi/.vs
+/GitHubPocWebApi/GitHubPocWebApi/bin/Release/net6.0
+/GitHubPocWebApi/GitHubPocWebApi/Properties
