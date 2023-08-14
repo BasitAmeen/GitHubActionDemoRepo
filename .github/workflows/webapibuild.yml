@@ -10,10 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: action/checkout@v3.5.3
-        with: 
-          repository: ${{ github.repository }}
-      
+      - uses: actions/checkout@v3.5.3
       - name: Setup .net
         uses: action/setup-dotnet@v3
         with:
@@ -29,7 +26,7 @@ jobs:
         run: dotnet publish -c release -o ${{env.DOTNET_ROOT}}/githubpocapi
   
       - name: Upload artifact for deployment job
-        uses: action/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: githubpoc.api
           path: ${{env.DOTNET_ROOT}}/githubpocapi
