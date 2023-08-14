@@ -1,4 +1,4 @@
-name: Build
+name: Continous integration & deployment
 on:
   push:
     branches: [ "main" ]
