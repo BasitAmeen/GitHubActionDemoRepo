@@ -17,10 +17,10 @@ jobs:
             dotnet-version: 6.0.x
          
       - name: build
-        run: dotnet build --no-restore
+        run: dotnet build **.sln --no-restore
   
       - name: dotnet publish
-        run: dotnet publish ./GitHubPocWebAPI/GitHubPocWebAPI/GitHubPocWebAPI.csproj -c release -o ${{env.DOTNET_ROOT}}/githubpocapi
+        run: dotnet publish **.csproj -c release -o ${{env.DOTNET_ROOT}}/githubpocapi
   
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3.1.2
