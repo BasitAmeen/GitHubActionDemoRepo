@@ -2,8 +2,6 @@ name: deploy
 on:
   workflow_run:
     workflows: ["BuildPipeline"]
-    branches:  [main]
-    types: -completed
     
 jobs:
   DeployDev:
